@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import StructuredData from "@/components/StructuredData";
+import RB2BLoader from "@/components/RB2BLoader";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -71,15 +72,13 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* RB2B visitor identification */}
-        <Script id="reb2b" strategy="afterInteractive">
-          {`!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("DNXY8HDW9PO0");`}
-        </Script>
-
         {/* Schema.org structured data for AI/search discoverability */}
         <StructuredData />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <RB2BLoader />
+        {children}
+      </body>
     </html>
   );
 }
