@@ -71,6 +71,11 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* RB2B visitor identification */}
+        <Script id="reb2b" strategy="afterInteractive">
+          {`!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("DNXY8HDW9PO0");`}
+        </Script>
+
         {/* Schema.org structured data for AI/search discoverability */}
         <StructuredData />
       </head>
