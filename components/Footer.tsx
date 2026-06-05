@@ -79,12 +79,6 @@ export default function Footer() {
             <a href="/privacy" className="hover:text-cream-100/70 transition-colors">
               Privacy
             </a>
-            <a href="/terms" className="hover:text-cream-100/70 transition-colors">
-              Terms
-            </a>
-            <a href="/security" className="hover:text-cream-100/70 transition-colors">
-              Security
-            </a>
           </div>
         </div>
       </div>
